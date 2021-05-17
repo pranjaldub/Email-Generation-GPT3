@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      OpenAI Email
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,9 +12,39 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+ 
+  <ion-card class="card" > 
+    <div class="heading" ><label class="float"  >Description</label></div>
+  <ion-item style="height:400px;outline: none;">
+    
+    <card style="height:400px;outline:none;border:none;">
+      <ion-item>
+        <ion-label position="floating">Receiver</ion-label>
+        <ion-input [(ngModel)]="receiver_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Your Name</ion-label>
+        <ion-input [(ngModel)]="sender_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Your Designation</ion-label>
+        <ion-input [(ngModel)]="sender_designation"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email subject</ion-label>
+        <ion-input [(ngModel)]="subject"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">enter keywords</ion-label>
+        <ion-input [(ngModel)]="keywords"></ion-input>
+      </ion-item>
+      <button class="ion-activatable ripple-parent" (click)="sayHi()">
+        Submit
+        <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+      </button>
+    </card>
+  </ion-item>
+</ion-card>
+<ion-card style="margin-left: 20px;border-radius: 30px;height:auto;width:50%;padding:10px;margin-top: 30px;margin-bottom: 50px;" > 
+<card style="height:400px;outline:none;border:none;margin-left: 40px;"><div id="email">Generated Email will be displayed here !</div></card>
+</ion-card>
